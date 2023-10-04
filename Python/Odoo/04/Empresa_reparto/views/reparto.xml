@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id='reparto_action' model='ir.actions.act_window'>
+        <field name="name">Listado de repartos</field>
+        <field name="res_model">reparto</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- menu almacen -->
+    <menuitem name="repartos" id="reparto_menu" parent="empresa_menu" action="reparto_action" />
+
+    <!-- Vista formulario -->
+    <record id="reparto_view_form" model="ir.ui.view">
+        <field name="name">Formulario de repartos</field>
+        <field name="model">reparto</field>
+        <field name="arch" type="xml">
+            <form>
+               <group>
+                    <group>
+                        <field name="c_reparto" />
+                        <field name="repartidor" />
+                        <field name="vehiculo_reparto" />
+                        <field name="estado" />
+                    </group>
+                    <group>
+                        <field name="fecha_inicio" />
+                        <field name="fecha_retorno" />
+                        <field name="fecha_entrega" />
+                    </group>
+                    <group>
+                        <field name="urgencia" />
+                        <field name="k_reparto" />
+                        <field name="peso" />
+                        <field name="volumen_paquete" />
+                        <field name="observaciones" />
+                    </group>
+                    <group>
+                        <field name="cliente_emisor" />
+                        <field name="receptor_nombre" />
+                        <field name="receptor_dni" />
+                    </group>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <!-- Tree(list) View -->
+    <record id="reparto_view_tree" model="ir.ui.view">
+        <field name="name">Lista de repartos</field>
+        <field name="model">reparto</field>
+        <field name="arch" type="xml">
+            <tree decoration-danger="estado=='1'" decoration-warning="estado=='2'" decoration-info="estado=='3'">
+                <field name="c_reparto" />
+                <field name="repartidor" />
+                <field name="estado" />
+                <field name="cliente_emisor" />
+            </tree>
+        </field>
+    </record>
+
+    <!-- Vista busqueda-->
+    <record id="reparto_view_search" model="ir.ui.view">
+        <field name="name">Búsqueda de reparto</field>
+        <field name="model">reparto</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="c_reparto" />
+                <field name="repartidor" />
+                <field name="estado" />
+                <field name="cliente_emisor" />
+            </search>
+        </field>
+    </record>
+
+</odoo>

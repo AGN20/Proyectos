@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "590003947436",
+    "project_id": "artnutria",
+    "storage_bucket": "artnutria.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:590003947436:android:28da6d343d5be3868c9c09",
+        "android_client_info": {
+          "package_name": "com.adgonu.artnutria"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "590003947436-dsra8m4up464s0hcuffqokdr01l51tvb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.adgonu.artnutria",
+            "certificate_hash": "ff4ac33897263fb1038076f0b48fa70a074f916d"
+          }
+        },
+        {
+          "client_id": "590003947436-f9mnfbr2cc72mcgb9qs8a204nepr7r4p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBf_0EhJddP5v4B9KpuyLa1OqgFjDQwcSs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "590003947436-f9mnfbr2cc72mcgb9qs8a204nepr7r4p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

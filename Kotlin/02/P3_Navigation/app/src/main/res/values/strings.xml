@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">P3_Navigation</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="header_text">Pokemon</string>
+    <string name="hoenn_text">Los entrenadores Pokémon que empiezan su aventura en esta región pueden elegir entre los Pokémon iniciales, Treecko, Torchic y Mudkip. En cuanto a los Pokémon legendarios, el trío creador, compuesto por Kyogre, Groudon y Rayquaza, guarda una profunda relación con el territorio. Dos son las organizaciones criminales que operan en Hoenn: el Equipo Aqua y el Equipo Magma. Ambas pretenden controlar la magna fuerza de Kyogre y Groudon, respectivamente.</string>
+    <string name="johto_text">Johto y Kanto forman una sola gran masa de tierra; un continente, en el cual al centro y dividiendo ambas regiones se encuentra la Meseta Añil, la Liga Pokémon, junto con el Monte Plateado y las Cataratas Tohjo. Comparte la misma Liga Pokémon con Kanto, solo que con otros miembros del Alto Mando y un nuevo campeón.</string>
+    <string name="kanto_text">Kanto pertenece al mismo continente que Johto. El lazo que une ambas regiones viene dado por las Cataratas Tohjo, si bien también está la ruta 27, que sirve de cruce con la Cueva Plateada, integrada en Johto pero separada de los demás lugares. Una de las formas más rápidas de viajar de una región a otra es tomando el Magnetotrén, un tren de alta velocidad que realiza el trayecto Ciudad Azafrán-Ciudad Trigal, además del barco que hace el trayecto Ciudad Olivo-Ciudad Carmín, aunque solo salga de Ciudad Olivo los lunes y viernes; y de Ciudad Carmín los miércoles y domingos.</string>
+    <string name="villanos_text">Los villanos cambian dependiendo de la region, generalmente son una organizacion dedicada a un objetivo comun, generalmente presidido por un lider</string>
+    <string name="legendarios_text">Los pokemons legendarios, son ejemplares unicos, con poderes casi dibinos, no se suelen dejar ver y algunos pueden llegar a ser peligrosos, aun a si, forman parte importante en la vida dentro del mundo de los pokemons y perturbarlos puede acarrear consecuencias inimaginables</string>
+    <string name="objetivo_text">El objetivo principal del juego es completar la pokedex o capturar todos los pokemons, no obstante, tambien encontramos objetivos secundarios dentro de la saga, los que serian derrotar al grupo de villanos de la region y conseguir todas las medallas para ganar la liga pokemon</string>
+</resources>

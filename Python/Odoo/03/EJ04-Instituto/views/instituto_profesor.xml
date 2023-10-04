@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Definimos como mostramos la vista en el modelo -->
+    <record id='instituto_profesor_action' model='ir.actions.act_window'>
+        <field name="name">Profesor</field>
+        <field name="res_model">instituto.profesor</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Simple menu item, sin más utilidad que la didáctica -->
+    <menuitem name="Instituto" id="instituto_base_menu" />
+    <menuitem name="Profesor" id="instituto_profesor_menu" parent="instituto_base_menu" action="instituto_profesor_action"/>
+
+    <!-- Definición de la Vista formulario -->
+    <record id="instituto_profesor_view_form" model="ir.ui.view">
+        <field name="name">Profesor</field>
+        <field name="model">instituto.profesor</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="id"/>
+                    <field name="nombre"/>
+                    <field name="apellido"/>
+                    <field name="modulo"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <!-- Definición de la vista Tree -->
+    <record id="instituto_profesor_view_tree" model="ir.ui.view">
+        <field name="name">Lista Profesores</field>
+        <field name="model">instituto.profesor</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="id"/>
+                <field name="nombre"/>
+                <field name="apellido"/>
+                <field name="modulo"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Definición de la vista busqueda-->
+    <record id="instituto_profesor_view_search" model="ir.ui.view">
+        <field name="name">Búsqueda Profesores</field>
+        <field name="model">instituto.profesor</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="id"/>
+                <field name="nombre"/>
+                <field name="apellido"/>
+                <field name="modulo"/>
+            </search>
+        </field>
+    </record>
+
+</odoo>

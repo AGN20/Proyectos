@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_graph"
+    app:startDestination="@id/KantoFragment">
+    <fragment
+        android:id="@+id/KantoFragment"
+        android:name="com.adgonu.p3_navigation.KantoFragment"
+        android:label="Kanto"
+        tools:layout="@layout/fragment_kanto" />
+    <fragment
+        android:id="@+id/johtoFragment"
+        android:name="com.adgonu.p3_navigation.JohtoFragment"
+        android:label="Johto"
+        tools:layout="@layout/fragment_johto" />
+    <fragment
+        android:id="@+id/hoennFragment"
+        android:name="com.adgonu.p3_navigation.HoennFragment"
+        android:label="Hoenn"
+        tools:layout="@layout/fragment_hoenn" />
+    <fragment
+        android:id="@+id/antagonistasFragment"
+        android:name="com.adgonu.p3_navigation.antagonistasFragment"
+        android:label="Antagonistas"
+        tools:layout="@layout/fragment_antagonistas" />
+    <fragment
+        android:id="@+id/objetivosFragment"
+        android:name="com.adgonu.p3_navigation.objetivosFragment"
+        android:label="Objetivos"
+        tools:layout="@layout/fragment_objetivos" />
+    <fragment
+        android:id="@+id/legendariosFragment"
+        android:name="com.adgonu.p3_navigation.LegendariosFragment"
+        android:label="Legendarios"
+        tools:layout="@layout/fragment_legendarios" />
+</navigation>

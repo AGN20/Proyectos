@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/options1"
+        android:icon="@drawable/carrito"
+        android:title="Compra"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/options2"
+        android:title="Eliminar todo" />
+
+    <item
+        android:id="@+id/options3"
+        android:title="Crear backup" />
+
+    <item
+        android:id="@+id/options4"
+        android:title="Restaurar backup" />
+
+</menu>

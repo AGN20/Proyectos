@@ -1,0 +1,16 @@
+REFERENCIAS:
+
+NAVIGATION -> https://sdram58.github.io/apuntesPMDM/unidades2223/ud4_activities_fragments_navigation.html#sNavigation
+FIREBASE -> https://sdram58.github.io/apuntesPMDM/unidades2223/ud11_firebase.html
+FIREBASE ENLAZAR -> https://console.firebase.google.com/u/1/project/artnutria/overview?hl=es-419
+PLAYLIST YOUTUBE -> https://www.youtube.com/playlist?list=PL_963TKBW5HA68EMhxMwjQctUKmQl93UM
+STACKOVERFLOW SOLUCION PROBLEMA PERMISOS -> https://stackoverflow.com/questions/46590155/firestore-permission-denied-missing-or-insufficient-permissions
+DOCUMENTACION FIREBASE -> https://firebase.google.com/docs/firestore/manage-data/add-data?hl=es-419#kotlin+ktx_9
+menu y navigation -> https://sdram58.github.io/apuntesPMDM/unidades2223/ud4_activities_fragments_navigation.html
+Subir imagenes a firestore -> https://youtu.be/pNleQQhVfd0
+Sacar datos de Firebase y mostrarlos en el ReciclerView -> https://stackoverflow.com/questions/72384736/retrieve-firebase-data-using-coroutines
+SearchView y como buscar -> https://youtu.be/LvP_wcFMZ1Q
+Botones redondeados -> https://es.stackoverflow.com/questions/9068/botones-redondeados-en-android
+Carusel -> https://youtu.be/bWIb2h_733E
+Imagenes circulares -> https://youtu.be/An-mS2oneCw
+Firebase funtions -> https://engineering.monstar-lab.com/en/post/2021/02/09/Use-Firebase-Cloudfunctions-To-Send-Push-Notifications/

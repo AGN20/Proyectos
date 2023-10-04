@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="report_reparto_view">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="web.internal_layout">
+                    <div class="page">
+                        <!--Titulo-->
+                        <h2>REPARTOS PENDIENTES</h2>
+                        <!--Tabla que contiene todo los datos, le ponemos una separacion para que no estren muy juntas-->
+                        <table style="width: 100%;">
+                            <tr style="background-color: #808080;">
+                                <th style="width: 25%;">Codigo de reparto</th>
+                                <th style="width: 25%;">Repartidor</th>
+                                <th style="width: 25%;">Estado</th>
+                                <th style="width: 25%;">Cliente</th>
+                            </tr>
+                            <tr>
+                                <td style="width: 25%;"><span t-field="doc.list_repartos.c_reparto" /></td>
+                                <td style="width: 25%;"><span t-field="doc.list_repartos.repartidor" /></td>
+                                <td style="width: 25%;"><span t-field="doc.list_repartos.estado" /></td>
+                                <td style="width: 25%;"><span t-field="doc.list_repartos.cliente_emisor" /></td>
+                            </tr>
+                        </table>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+    <!-- Realmente, este es el informe, lo de arriba es la plantilla que utilizara el informe -->
+    <report id="report_reparto" model="empleado" string="Informe repartos pendientes" name="Empresa_reparto.report_reparto_view" file="Empresa_reparto.report_reparto_view" report_type="qweb-pdf" />
+
+
+</odoo>

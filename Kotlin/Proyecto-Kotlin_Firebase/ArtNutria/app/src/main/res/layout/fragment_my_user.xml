@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.MyUserFragment">
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="166dp"
+        android:layout_height="167dp"
+        android:elevation="10dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivUser"
+        android:layout_width="124dp"
+        android:layout_height="131dp"
+        app:circularflow_defaultRadius="@dimen/cardview_default_radius"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.057"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.027" />
+
+    <EditText
+        android:id="@+id/edNombre"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/NombreXml"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/edDescripcion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.411"
+        app:layout_constraintStart_toEndOf="@+id/ivUser"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.13" />
+
+    <EditText
+        android:id="@+id/edIdioma"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/IdiomaXml"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/edDescripcion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.406"
+        app:layout_constraintStart_toEndOf="@+id/ivUser"
+        app:layout_constraintTop_toBottomOf="@+id/edCorreo"
+        app:layout_constraintVertical_bias="0.421" />
+
+    <EditText
+        android:id="@+id/edCorreo"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/EmailXml"
+        android:textSize="15sp"
+        android:enabled="false"
+        app:layout_constraintBottom_toTopOf="@+id/edDescripcion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.411"
+        app:layout_constraintStart_toEndOf="@+id/ivUser"
+        app:layout_constraintTop_toBottomOf="@+id/edNombre"
+        app:layout_constraintVertical_bias="0.117" />
+
+    <EditText
+        android:id="@+id/edDescripcion"
+        android:layout_width="371dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="@string/DescripcionXml"
+        android:inputType="textMultiLine"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/rvMyObra"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivUser"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/bttnSubir"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/SubirObraXml"
+        app:layout_constraintBottom_toTopOf="@+id/rvMyObra"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.069"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edDescripcion"
+        app:layout_constraintVertical_bias="0.02" />
+
+    <Button
+        android:id="@+id/bttCambios"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:text="@string/GuardarXml"
+        app:layout_constraintBottom_toTopOf="@+id/rvMyObra"
+        app:layout_constraintEnd_toEndOf="@+id/bttSiguiendo"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/bttSiguiendo"
+        app:layout_constraintTop_toBottomOf="@+id/bttSiguiendo" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvMyObra"
+        android:layout_width="match_parent"
+        android:layout_height="367dp"
+        android:layout_marginTop="400dp"
+        android:paddingTop="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/bttFollow"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:text="@string/LikkeXml"
+        app:layout_constraintBottom_toTopOf="@+id/rvMyObra"
+        app:layout_constraintEnd_toEndOf="@+id/bttnSubir"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/bttnSubir"
+        app:layout_constraintTop_toBottomOf="@+id/bttnSubir" />
+
+    <Button
+        android:id="@+id/bttSiguiendo"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/SiguiendoXml"
+        app:layout_constraintBottom_toTopOf="@+id/rvMyObra"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.428"
+        app:layout_constraintStart_toEndOf="@+id/bttnSubir"
+        app:layout_constraintTop_toBottomOf="@+id/edDescripcion"
+        app:layout_constraintVertical_bias="0.02" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

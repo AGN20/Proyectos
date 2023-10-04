@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+acl_pacientes_hospital,hospital.pacientes_hospital_default,model_pacientes_hospital,,1,0,0,0
+acl_pacientes_hospital_medico,hospital.pacientes_hospital_medico,model_pacientes_hospital,grupo_medico,1,1,1,1
+acl_medicos_hospital,hospital.medicos_hospital_default,model_medicos_hospital,,1,0,0,0
+acl_medicos_hospital_medico,hospital.medicos_hospital_medico,model_medicos_hospital,grupo_medico,1,1,1,1
+acl_diagnostico_hospital,hospital.diagnostico_hospital_default,model_diagnostico_hospital,,1,0,0,0
+acl_diagnostico_hospital_medico,hospital.diagnostico_hospital_medico,model_diagnostico_hospital,grupo_medico,1,1,1,1

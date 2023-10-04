@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Definimos como mostramos la vista en el modelo -->
+    <record id='diagnostico_hospital_action' model='ir.actions.act_window'>
+        <field name="name">Diagnostico</field>
+        <field name="res_model">diagnostico.hospital</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Simple menu item, sin más utilidad que la didáctica -->
+    <menuitem name="Hospital (Simple)" id="hospital_base_menu" />
+    <menuitem name="Diagnosticos" id="diagnostico_hospital_menu" parent="hospital_base_menu" action="diagnostico_hospital_action"/>
+
+    <!-- Definición de la Vista formulario -->
+    <record id="diagnostico_hospital_view_form" model="ir.ui.view">
+        <field name="name">Diagnostico del Hospital</field>
+        <field name="model">diagnostico.hospital</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="id"/>
+                    <field name="codigo_Medico"/>
+                    <field name="codigo_Name"/>
+                    <field name="diagnostico"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <!-- Definición de la vista Tree -->
+    <record id="diagnostico_hospital_view_tree" model="ir.ui.view">
+        <field name="name">Lista Diagnostico del hospital</field>
+        <field name="model">diagnostico.hospital</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="id"/>
+                <field name="codigo_Medico"/>
+                <field name="codigo_Name"/>
+                <field name="diagnostico"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Definición de la vista busqueda-->
+    <record id="medicos_hospital_view_search" model="ir.ui.view">
+        <field name="name">Búsqueda de Diagnosticos</field>
+        <field name="model">diagnostico.hospital</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="id"/>
+                <field name="codigo_Medico"/>
+                <field name="codigo_Name"/>
+            </search>
+        </field>
+    </record>
+
+</odoo>

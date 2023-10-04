@@ -1,0 +1,283 @@
+public class Examen {
+
+
+
+	/*Ejercicio 1*/
+
+	interface Almacenable {
+
+		String getlugar();
+
+	}
+
+	
+
+	/*Ejercicio 2*/
+
+	
+
+	protected abstract static class Informacion implements Almacenable{
+
+		protected String nombre;
+
+		protected String lugar;
+
+		
+
+		public Informacion(String n,String l) {
+
+			nombre = n;
+
+			lugar = l;
+
+		}
+
+		/*getters*/
+
+		public String getNombre() {
+
+			return nombre;
+
+		}
+
+		public String getLugar() {
+
+			return lugar;
+
+		}
+
+		
+
+		/*Setters*/
+
+		public void setNombre(String n) {
+
+			nombre = n;
+
+		}
+
+		public void setLugar(String l) {
+
+			lugar = l;
+
+		}
+
+		
+
+		/* Declaramos el metodo copia como abstracto*/
+
+		protected abstract String Copia();
+
+		
+
+		/*Sobrescribir toString*/
+
+		@Override
+
+		public String toString() {
+
+			String cadena = "<"+nombre+">"+"<"+lugar+">";
+
+			return cadena;
+
+		}
+
+		protected static Informacion Carpeta(String string, String string2) {
+
+			// TODO Auto-generated method stub
+
+			return null;
+
+		}
+
+		protected static Informacion Fichero(String string, String string2, long l) {
+
+			// TODO Auto-generated method stub
+
+			return null;
+
+		}
+
+		protected static Informacion Coche(String string) {
+
+			// TODO Auto-generated method stub
+
+			return null;
+
+		}
+
+	}
+
+	/*Ejercicio3*/
+
+	protected abstract class Carpeta extends Informacion implements Almacenable{
+
+		
+
+		protected boolean vacia = true;
+
+		
+
+		public Carpeta(String nombre, String lugar, boolean v) {
+
+			super(nombre,lugar);
+
+			vacia = v;
+
+		}
+
+		
+
+		@Override
+
+		public String toString() {
+
+			String cadena = "<"+nombre+">"+"<"+lugar+">"+"vacia: "+"<"+vacia+">";
+
+			return cadena;
+
+		}
+
+		
+
+	}
+
+	
+
+	/*Ejercicio 4*/
+
+	protected abstract class Fichero extends Informacion implements Almacenable{
+
+		protected long peso;
+
+		
+
+		public Fichero(String nombre, String lugar, long p){
+
+			super(nombre,lugar);
+
+			peso = p;
+
+		}
+
+		
+
+		@Override
+
+		public String toString() {
+
+			String cadena = "peso: "+peso+"<"+nombre+">"+"<"+lugar+">";
+
+		}
+
+		
+
+	}
+
+	
+
+	/*Ejercicio 5*/
+
+	public class Backup{
+
+		
+
+		protected String nombre;
+
+		protected char tipo;
+
+		
+
+		public Backup(String nombre, char tipo) {
+
+			
+
+		}
+
+	}
+
+	/*Ejercicio 6*/
+
+	public class Coche{
+
+		protected String nombre;
+
+		protected String lugar;
+
+		public String getLugar() {
+
+			return lugar;
+
+		}
+
+		@Override
+
+		public String toString() {
+
+			String cadena = "Coche: " + "<"+nombre+">";
+
+		}
+
+	}
+
+	/*Ejercicio 7*/
+
+	public class ElementoBackup{
+
+		private long numElemento;
+
+		
+
+		public void ElementoBackup(long n) {
+
+			numElemento = n;
+
+		}
+
+		
+
+	}
+
+	
+
+	/*Ejercicio 8*/
+
+	public static void main(String[]args) {
+
+		Informacion[] in = new Informacion[4];
+
+		in[0]= Informacion.Carpeta("Coco","\\PC1");
+
+		in[1]= Informacion.Fichero("trabajo1.docx","Coco",1000L);
+
+		in[2]= Informacion.Coche("Ford Fiesta"+"la calle");
+
+		in[3]= Informacion.Coche("BMW"+"garaje");
+
+		int fichero;
+
+		
+
+		for(int i = 0; i<in.length;i++) {
+
+			String cadena = in[i].toString();
+
+			System.out.println(cadena);
+
+			
+
+			if(in[i].equals("*.*")) {
+
+				fichero = fichero + 1;
+
+			}
+
+		}
+
+		double porcent = (fichero/in.length) * 100;
+
+		System.out.println("Porcentaje de ficheros: "+ porcent);
+
+	}
+
+}

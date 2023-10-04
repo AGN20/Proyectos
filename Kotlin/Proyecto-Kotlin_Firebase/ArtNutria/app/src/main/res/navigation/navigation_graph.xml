@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.adgonu.artnutria.ui.fragments.HomeFragment"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_carouselFragment"
+            app:destination="@id/carouselFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_myUserFragment"
+            app:destination="@id/myUserFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/myUserFragment"
+        android:name="com.adgonu.artnutria.ui.fragments.MyUserFragment"
+        tools:layout="@layout/fragment_my_user" >
+        <action
+            android:id="@+id/action_myUserFragment_to_obraFragment"
+            app:destination="@id/obraFragment" />
+        <action
+            android:id="@+id/action_myUserFragment_to_followUserFragment"
+            app:destination="@id/followUserFragment" />
+        <action
+            android:id="@+id/action_myUserFragment_to_followObraFragment"
+            app:destination="@id/followObraFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/obraFragment"
+        android:name="com.adgonu.artnutria.ui.fragments.ObraFragment"
+        tools:layout="@layout/fragment_obra" />
+    <fragment
+        android:id="@+id/carouselFragment"
+        android:name="com.adgonu.artnutria.ui.fragments.CarouselFragment"
+        tools:layout="@layout/fragment_carousel" >
+        <action
+            android:id="@+id/action_carouselFragment_to_userFragment"
+            app:destination="@id/userFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/followUserFragment"
+        android:name="com.adgonu.artnutria.ui.fragments.FollowUserFragment"
+        tools:layout="@layout/fragment_follow_user" />
+    <fragment
+        android:id="@+id/followObraFragment"
+        android:name="com.adgonu.artnutria.ui.fragments.LikkeObraFragment"
+        tools:layout="@layout/fragment_likke_obra" />
+    <fragment
+        android:id="@+id/userFragment"
+        android:name="com.adgonu.artnutria.ui.fragments.UserFragment"
+        tools:layout="@layout/fragment_user" />
+</navigation>

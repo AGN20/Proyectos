@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id='vehiculo_action' model='ir.actions.act_window'>
+        <field name="name">Listado de vehiculos</field>
+        <field name="res_model">vehiculo</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- menu almacen -->
+    <menuitem name="vehiculos" id="vehiculo_menu" parent="empresa_menu" action="vehiculo_action" />
+
+    <!-- Vista formulario -->
+    <record id="vehiculo_view_form" model="ir.ui.view">
+        <field name="name">Formulario de vehiculos</field>
+        <field name="model">vehiculo</field>
+        <field name="arch" type="xml">
+            <form>
+               <group>
+                    <group>
+                        <field name="matricula" />
+                        <field name="tipo" />
+                        <field name="descripcion" />
+                    </group>
+                    
+                    <group>
+                        <field name="foto_vehiculo" widget="image" class="oe_avatar" />
+                    </group>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <!-- Tree(list) View -->
+    <record id="vehiculo_view_tree" model="ir.ui.view">
+        <field name="name">Lista de vehiculos</field>
+        <field name="model">vehiculo</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="matricula" />
+                <field name="tipo" />
+                <field name="descripcion" />
+            </tree>
+        </field>
+    </record>
+
+    <!-- Vista busqueda-->
+    <record id="vehiculo_view_search" model="ir.ui.view">
+        <field name="name">Búsqueda de vehiculo</field>
+        <field name="model">vehiculo</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="matricula" />
+                <field name="tipo" />
+                <field name="descripcion" />
+            </search>
+        </field>
+    </record>
+
+</odoo>

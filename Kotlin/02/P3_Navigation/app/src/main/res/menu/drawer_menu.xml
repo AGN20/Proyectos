@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/KantoFragment"
+        android:icon="@drawable/icon_kanto"
+        android:title="Kanto" />
+
+    <item
+        android:id="@+id/johtoFragment"
+        android:icon="@drawable/icon_johto"
+        android:title="Johto" />
+
+    <item
+        android:id="@+id/hoennFragment"
+        android:icon="@drawable/icon_hoenn"
+        android:title="Hoenn" />
+
+</menu>

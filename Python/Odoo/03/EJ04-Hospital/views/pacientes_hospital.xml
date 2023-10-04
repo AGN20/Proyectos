@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Definimos como mostramos la vista en el modelo -->
+    <record id='pacientes_hospital_action' model='ir.actions.act_window'>
+        <field name="name">Pacientes</field>
+        <!-- Indicamos a que modelo aplica -->
+        <field name="res_model">pacientes.hospital</field>
+        <!-- Indicamos que los comics pueden verse en tree para el listado,
+            y en form para la creación/edición -->
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Simple menu item, sin más utilidad que la didáctica -->
+    <menuitem name="Hospital (Simple)" id="hospital_base_menu" />
+    <menuitem name="Pacientes" id="pacientes_hospital_menu" parent="hospital_base_menu" action="pacientes_hospital_action"/>
+
+    <!-- Definición de la Vista formulario -->
+    <record id="pacientes_hospital_view_form" model="ir.ui.view">
+        <field name="name">Pacientes del Hospital</field>
+        <field name="model">pacientes.hospital</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="nombre"/>
+                    <field name="apellido"/>
+                    <field name="diagnosticos"/>
+                    <field name="sintomas"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <!-- Definición de la vista Tree -->
+    <record id="pacientes_hospital_view_tree" model="ir.ui.view">
+        <field name="name">Lista pacientes del hospital</field>
+        <field name="model">pacientes.hospital</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="nombre"/>
+                <field name="apellido"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Definición de la vista busqueda-->
+    <record id="pacientes_hospital_view_search" model="ir.ui.view">
+        <field name="name">Búsqueda de pacientes</field>
+        <field name="model">pacientes.hospital</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="nombre"/>
+                <field name="apellido"/>
+            </search>
+        </field>
+    </record>
+
+</odoo>

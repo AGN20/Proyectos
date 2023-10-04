@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.MainActivity"
+    android:background="@color/fondoApp">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/scvMensajes"
+        android:layout_width="376dp"
+        android:layout_height="574dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.101"
+        android:background="@drawable/formato1">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <EditText
+        android:id="@+id/tvEscribir"
+        android:layout_width="299dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="14dp"
+        android:hint="put your text"
+        android:background="@drawable/formato2"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scvMensajes" />
+
+    <ImageButton
+        android:id="@+id/btnEnviar"
+        android:layout_width="64dp"
+        android:layout_height="56dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvEscribir"
+        app:layout_constraintTop_toBottomOf="@+id/scvMensajes"
+        app:layout_constraintVertical_bias="0.505"
+        app:srcCompat="@drawable/ic_send_foreground"
+        android:background="@drawable/formato3"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

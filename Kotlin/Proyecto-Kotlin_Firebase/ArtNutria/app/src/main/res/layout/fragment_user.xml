@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.UserFragment">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivUser"
+        android:layout_width="124dp"
+        android:layout_height="131dp"
+        android:src="@drawable/imagen_usuario"
+        app:circularflow_defaultRadius="@dimen/cardview_default_radius"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.087"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.031" />
+
+    <TextView
+        android:id="@+id/txNombre"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:text="@string/NombreXml"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/txDescripcion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintStart_toEndOf="@+id/ivUser"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.154" />
+
+    <TextView
+        android:id="@+id/txEmail"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:text="@string/EmailXml"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/txDescripcion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintStart_toEndOf="@+id/ivUser"
+        app:layout_constraintTop_toBottomOf="@+id/txNombre"
+        app:layout_constraintVertical_bias="0.28" />
+
+    <TextView
+        android:id="@+id/txIdioma"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:text="@string/IdiomaXml"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/txDescripcion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivUser"
+        app:layout_constraintTop_toBottomOf="@+id/txEmail" />
+
+    <TextView
+        android:id="@+id/txDescripcion"
+        android:layout_width="361dp"
+        android:layout_height="112dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/DescripcionXml"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivUser" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvObrasUser"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_marginTop="45dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSeguirUser" />
+
+    <Button
+        android:id="@+id/btnSeguirUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/Seguir"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txDescripcion" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,367 @@
+Ejercicio 1:
+
+Proceso ej1
+
+	Definir num, resul Como Real;
+	
+	Escribir "  CAMBIO UNIDADES VELOCIDAD KM/H A M/S  ";
+	Escribir "  ************************************  ";
+	Escribir "";
+	Escribir "Tecle velocidad en Km/h; " Sin Saltar;
+	leer num;
+	
+	resul <- num / 3.6;
+	
+	Escribir "Velocidad= ", resul, " m/s";
+	
+FinProceso
+
+
+Ejercicio 2:
+
+Proceso ej2
+	Definir a, b, c, resu1, resu2, ope como reales;
+
+	repetir // Repetimos lo anterior siempre que A y B no sean distintos ha 0
+		
+		
+		Escribir "Teclee a: " Sin Saltar;
+		leer a;
+		Escribir "Teclee b: " Sin Saltar;
+		Leer b;
+		Escribir "Teclee c: " Sin Saltar;
+		Leer c;
+		
+		si a == 0 && b == 0 entonces // Indicamos un mensaje si A y B son 0
+			
+			Escribir "ERROR: a y b no pueden ser 0 al mismo tiempo. Tecle datos de nuevo.";
+			
+		FinSi
+		
+	hasta que a <> 0 || b <> 0
+		
+	Si a == 0 || b == 0 || c == 0 Entonces // Si alguno es 0 haces lo diguiente, si no haces la funcion normal
+		
+			si a == 0 && b <> 0 && c <> 0 entonces // si a es 0 ( b y c no pueden ser 0 ) haz la siguiente funcion
+				resu1 <- -c / b;
+				Escribir "   Una solución. X= ", resu1;
+			Finsi
+			
+			si c == 0 && a <> 0 && b <> 0 entonces // Si c es 0 ( a y b no pueden ser 0 ) haz la siguiente funcion
+				resu1 <- 0;
+				resu2 <- -b / a;
+				Escribir "   Dos soluciones. X= ", resu1, " y x= ", resu2;
+			FinSi
+			
+			si b == 0 && a <> 0 && c <> 0 entonces // Si b es 0 ( a y c no pueden ser 0 ) haz la siguiente funcion
+				ope <- (-c / a); // Ope guarda esta parte de la funcion para comprobar
+				si ope < 0 entonces // Comprobamos los radicales negativos, si no haz la funcion normal
+					Escribir "  No tiene solucion en los reales.";
+				sino
+				resu1 <- -(raiz (ope));
+				resu2 <- +(raiz (ope));
+				Escribir "   Dos soluciones. X= ", resu1, " y x= ", resu2;
+				FinSi
+			
+			FinSi
+			
+		SiNo // Funcion que se hace si ninguno son 0
+			
+			resu1 <- (-b + ( raiz ((b^2) - (4*a*c) ))) / (2 * a);
+			resu2 <- (-b - ( raiz ((b^2) - (4*a*c) ))) / (2 * a);
+			
+			Escribir "   Dos soluciones. X= ", resu1, " y x= ", resu2;
+			
+		FinSi
+FinProceso
+
+
+Ejercicio 3:
+
+Proceso ej3
+	
+	Definir n como entero;
+	Definir res Como Real;
+	
+	// Repetimos asta que se coja la opcion 3, salir
+	Repetir
+		//Repite el Menu hasta que se elija una opcion
+		Repetir
+			
+			n <- 0
+			
+			Borrar Pantalla;
+			
+			// Menu
+			
+			Escribir "   CALCULA AREAS DE TRIANGULOS";
+			Escribir "   ***************************";
+			Escribir " 1. Conociendo base y altura.";
+			Escribir " 2. Conociendo la longitud de los 3 lados.";
+			Escribir " 3. Salir";
+			Escribir "";
+			Escribir "     Escoja una opcion(1-3): " Sin Saltar;
+			Leer n;
+		
+		Hasta Que n >= 1 & n <= 3
+		
+		// Si la opcion es 1 haces la operacion base * altura / 2
+		Si n == 1 Entonces
+			
+			Definir alt, base como real;
+			
+			Escribir "";
+			Escribir "Tecle la altura: " Sin Saltar;
+			leer alt;
+			Escribir "Tecle la base " Sin Saltar;
+			leer base;
+			
+			res <- (base * alt) / 2;
+			
+			Escribir "";
+			Escribir "El area es; ", res;
+			Escribir "";
+			Escribir "Pulse enter para continuar";
+			Esperar Tecla
+			
+		FinSi
+		
+		// Si la opcion es 2 hace el semi perimetro con la operacion a+b+c/2 y calcula el area con la raizcuadrada de s*s-a*s-b*s-c
+		si n == 2 entonces
+			
+			Definir a, b, c, s como reales;
+			
+			Escribir "";
+			Escribir " Escribe el lado A: " Sin Saltar;
+			Leer a;
+			Escribir " Escribe el lado B: " Sin Saltar;
+			Leer b;
+			Escribir " Escribe el lado C: " Sin Saltar;
+			Leer c;
+			
+			s <- (a + b + c) / 2
+			res <- (raiz (s*((s-a)*(s-b)*(s-c))))
+			
+			Escribir "";
+			Escribir "El area es: ", res;
+			Escribir "";
+			Escribir "Pulse enter para continuar";
+			Esperar Tecla
+			
+		FinSi
+	hasta que n == 3
+FinProceso
+
+
+
+Ejercicio 4:
+
+
+Proceso ej4
+	
+	Definir n como entero;
+	Definir res Como Real;
+	
+	// Repetimos asta que se coja la opcion 3, salir
+	Repetir
+		//Repite el Menu hasta que se elija una opcion
+		Repetir
+			n <- menu()
+		Hasta Que n >= 1 & n <= 3
+		
+		// Si la opcion es 1 haces la operacion base * altura / 2
+		Si n == 1 Entonces
+			res <- areaBaseAltura()
+		FinSi
+		
+		// Si la opcion es 2 hace el semi perimetro con la operacion a+b+c/2 y calcula el area con la raizcuadrada de s*s-a*s-b*s-c
+		si n == 2 entonces
+			res <- areaHeron()
+		FinSi
+	hasta que n == 3
+FinProceso
+
+SubAlgoritmo num <- menu ()
+	
+	num <- 0
+	
+	Borrar Pantalla;
+	
+	// Menu
+	
+	Escribir "   CALCULA AREAS DE TRIANGULOS";
+	Escribir "   ***************************";
+	Escribir " 1. Conociendo base y altura.";
+	Escribir " 2. Conociendo la longitud de los 3 lados.";
+	Escribir " 3. Salir";
+	Escribir "";
+	Escribir "     Escoja una opcion(1-3): " Sin Saltar;
+	Leer num;
+	
+FinSubAlgoritmo
+
+SubAlgoritmo res <- areaBaseAltura()
+	
+	Definir alt, base como real;
+	
+	Escribir "";
+	Escribir "Tecle la altura: " Sin Saltar;
+	leer alt;
+	Escribir "Tecle la base " Sin Saltar;
+	leer base;
+	
+	res <- (base * alt) / 2;
+	
+	Escribir "";
+	Escribir "El area es; ", res;
+	Escribir "";
+	Escribir "Pulse enter para continuar";
+	Esperar Tecla
+	
+FinSubAlgoritmo
+
+SubAlgoritmo res <- areaHeron()
+	
+	Definir a, b, c, s como reales;
+	
+	Escribir "";
+	Escribir " Escribe el lado A: " Sin Saltar;
+	Leer a;
+	Escribir " Escribe el lado B: " Sin Saltar;
+	Leer b;
+	Escribir " Escribe el lado C: " Sin Saltar;
+	Leer c;
+	
+	s <- (a + b + c) / 2
+	res <- (raiz (s*((s-a)*(s-b)*(s-c))))
+	
+	Escribir "";
+	Escribir "El area es: ", res;
+	Escribir "";
+	Escribir "Pulse enter para continuar";
+	Esperar Tecla
+	
+FinSubAlgoritmo
+
+
+
+Ejercicio 5:
+
+
+Algoritmo Ej5
+	
+	Definir a, b, n como real;
+	
+	Escribir "Tecle el primer numero: " Sin Saltar;
+	leer a;
+	Escribir "Tecle el segundo numero: " Sin Saltar;
+	leer b;
+	
+	n <- mcd (a,b);
+	
+	Escribir "El máximo común divisor de ", a, " y ", b, " es ", n;
+	
+FinAlgoritmo
+
+SubProceso r <- mcd(a,b)
+	
+	Definir temp Como Entero;
+	
+	si a < b Entonces
+		temp <- a;
+		a <- b;
+		b <- temp;
+	FinSi
+	Mientras b <> 0 hacer
+
+		
+		r <- a MOD b;
+		a <- b;
+		b <- r;
+		
+	FinMientras
+	
+	r <- a;
+	
+FinSubProceso
+
+
+
+Ejercicio 7:
+
+Algoritmo ej7
+	
+	Definir n, res1, res2 como entero;
+	Escribir "Tecle un entero (mayor o igual a 0): " sin saltar;
+	Leer n;
+	
+	res1 <- fibo(n);
+	res2 <- fibo_recur(n);
+	
+	Escribir " No recursivo: F", n, "= ", res1;
+	Escribir "    recursivo: F", n, "= ", res2;
+	
+FinAlgoritmo
+
+SubProceso res <- fibo(n)
+	
+	Definir res, fib0, fib1, e, i como entero;
+	
+	si n == 1 || n == 0 entonces
+		
+		res <- n;
+		res <- n;
+		
+	SiNo
+		
+		i <- 1;
+		fib0 <- 0;
+		fib1 <- 1;
+		
+		mientras i <> n hacer
+			
+			i <- i + 1;
+			
+			e <- fib0 + fib1;
+			
+			fib0 <- fib1;
+			
+			fib1 <- e;
+			
+			res <- e;
+			
+		FinMientras
+			
+	FinSi 
+	
+	
+FinSubProceso
+
+SubProceso res <- fibo_recur(n)
+	
+	Definir res, fib0, fib1, e, i como entero;
+	
+	si n == 1 || n == 0 entonces
+		
+		res <- n;
+		
+	SiNo
+		
+		fib0 <- 0;
+		fib1 <- 1;
+		
+		para  i <- 2 hasta n hacer
+			
+			e <- fib0 + fib1;
+			
+			fib0 <- fib1;
+			
+			fib1 <- e;
+			
+			res <- e;
+			
+		FinPara
+		
+	FinSi 
+FinSubProceso
+	

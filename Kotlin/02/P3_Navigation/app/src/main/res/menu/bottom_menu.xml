@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/legendariosFragment"
+        android:icon="@drawable/icon_legendario"
+        android:title="LENGENDARIOS" />
+
+    <item
+        android:id="@+id/objetivosFragment"
+        android:icon="@android:drawable/ic_menu_compass"
+        android:title="OBJETIVOS" />
+
+    <item
+        android:id="@+id/antagonistasFragment"
+        android:icon="@drawable/icon_villanos"
+        android:title="ANTAGONISTAS" />
+</menu>

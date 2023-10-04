@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id='cliente_action' model='ir.actions.act_window'>
+        <field name="name">Listado de clientes</field>
+        <field name="res_model">cliente</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- menu almacen -->
+    <menuitem name="clientes" id="cliente_menu" parent="empresa_menu" action="cliente_action" />
+
+    <!-- Vista formulario -->
+    <record id="cliente_view_form" model="ir.ui.view">
+        <field name="name">Formulario de clientes</field>
+        <field name="model">cliente</field>
+        <field name="arch" type="xml">
+            <form>
+               <group>
+                    <field name="dni_cliente" />
+                    <field name="nombre" />
+                    <field name="apellido" />
+                    <field name="tel" />
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <!-- Tree(list) View -->
+    <record id="cliente_view_tree" model="ir.ui.view">
+        <field name="name">Lista de clientes</field>
+        <field name="model">cliente</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="dni_cliente" />
+                <field name="nombre" />
+                <field name="apellido" />
+                <field name="tel" />
+            </tree>
+        </field>
+    </record>
+
+    <!-- Vista busqueda-->
+    <record id="cliente_view_search" model="ir.ui.view">
+        <field name="name">Búsqueda de cliente</field>
+        <field name="model">cliente</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="dni_cliente" />
+                <field name="nombre" />
+                <field name="apellido" />
+                <field name="tel" />
+            </search>
+        </field>
+    </record>
+
+</odoo>

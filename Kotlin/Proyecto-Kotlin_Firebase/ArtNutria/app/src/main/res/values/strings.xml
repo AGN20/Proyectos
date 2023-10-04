@@ -1,0 +1,68 @@
+<resources>
+    <string name="app_name">ArtNutria</string>
+    <!-- codigo -->
+    <string name="NotUser">notuser@gmail.com</string>
+    <string name="NotUserPassword">notuser</string>
+    <!-- Mensages de error -->
+    <string name="TituloError">ERROR</string>
+    <string name="Aceptar">Aceptar</string>
+    <string name="UsuarioCreado">Ya hay un usuario con ese correo</string>
+    <string name="ErrorEmailContraseña">"El email o la contraseña son incorrectas"</string>
+    <string name="ErrorCaracteres">"La contraseña debe tener mas de 6 caracteres"</string>
+    <string name="ErrorFormatoGmail">"El email debe parecerse a micorreo@gmail.com"</string>
+    <string name="ErrorVacio">"El email o la contraseña esta vacios"</string>
+    <!-- Strings cortos -->
+    <string name="obra">obra</string>
+    <string name="user">user</string>
+    <string name="image">image</string>
+    <string name="imagen">imagen</string>
+    <string name="video">video</string>
+    <string name="muletillaObra">_obra_</string>
+    <string name="nombre">nombre</string>
+    <string name="NoSeguir">No seguir</string>
+    <string name="Seguir">Seguir</string>
+    <string name="FormLikkes">Likkes: </string>
+    <string name="FormImagenes">Imagenes: </string>
+    <!-- rutas de firebase -->
+    <string name="pathUsers">usuarios</string>
+    <string name="pathObras">obras</string>
+    <string name="userImage">userimage</string>
+    <string name="artstorage">artstorage</string>
+    <string name="obrasLikkes">obrasLikkes</string>
+    <string name="favoritos">favoritos</string>
+    <string name="imagenes">imagenes</string>
+    <string name="uid">uid</string>
+    <string name="likkes">likkes</string>
+    <!-- comentarios de operaciones de firebase -->
+    <string name="guardado">Datos guardados</string>
+    <string name="imagenGuardado">Imagen guardada</string>
+    <string name="imagenNoGuardado">No se ha guardado la imagen</string>
+    <string name="noGuardado">No se ha guardado los datos</string>
+    <string name="coletillaUserImage">_userimage</string>
+    <string name="obraSubida">Obra subida</string>
+    <string name="obraNoSubida">No se ha subido la Obra</string>
+    <!-- xml -->
+    <string name="loguin">Login</string>
+    <string name="registrar">Registrar</string>
+    <string name="sinUsuario">Entrar sin usuario</string>
+    <string name="contraseña">Contraseña</string>
+    <string name="email">Email</string>
+    <string name="nombreObra">nombre Obra\n</string>
+    <string name="FormLikkesInit">Likkes: 0</string>
+    <string name="FormImagenesInit">Imagenes: 0</string>
+    <string name="usuario">usuario</string>
+    <string name="etiquetas">etiqueta</string>
+    <string name="NombreXml">Nombre</string>
+    <string name="IdiomaXml">Idioma</string>
+    <string name="EmailXml">Email</string>
+    <string name="DescripcionXml">Descripción</string>
+    <string name="SubirObraXml">Subir Obra</string>
+    <string name="GuardarXml">Guardar</string>
+    <string name="LikkeXml">Likke</string>
+    <string name="SiguiendoXml">Siguiendo</string>
+    <string name="EtiquetasXML">Etiquetas</string>
+    <string name="AñadirXml">Añadir</string>
+    <string name="SubirXml">Subir</string>
+
+
+</resources>
